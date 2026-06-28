@@ -1,107 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Page</title>
-    <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Anmut Tsegaye | Health Informatics Professional</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <main>
-         <!--Section 0 -->
-         <div class="menu">
-         <section class="navs">
-            <a href="#home" class="nav">Home</a>
-            <a href="#about" class="nav">About me</a>
-            <a href="#skills" class="nav">Skills</a>
-            <a href="#projects" class="nav">Projects</a>
-            <a href="#contact" class="nav">Contact</a>
-          </section>
-          </div>
-        <section>
-            <h1>Hi I'm Anmut Tsegaye!👨‍💻</h1>
-            <p>Health Informatics Graduated, Turnig Data for Better Health Decisions and 
-              Leverageing the Health care Sysstem and Services Using Technologies.</p>
-            
-        </section>
-        <!--Section 2 -->
-        <section class="about" id="about">
-          <img src="me.jpg" alt="My photo">
-          <div>
-            <h2>About me</h2>
-            <p style="font-weight: normal; width: 75%;"> I'm Health Informatics Graduated in July 2025 
-              at <a href="http://www.UoG.edu.et/" style="text-decoration: none;">University of Gondar</a> by Building Symbptom-Based Disease Identification Web appliction 
-              for health awareness and Early detection of Disease as a final project for my Graduation, 
-              Web site developer 
-                Have a Passion for Programming and Digital Health.
-            </p>
-          </div>
-          </section>
-          <!-- Section 3 -->
-           <h2 id="skills">Skills</h2>
-          <section class="skills">
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">PHP</div>
-            <div class="skill">C++</div>
-            <div class="skill">Java</div>
-          </section>
-           <!-- Section 4 -->
-            <section>
-              <h2 id="projects">Projects</h2>
-            </section>
-        <section class="portfolio">
-            <div class="project">
-               <img src="p2.jpg" alt="Project 1">
-                <h3>Personal Landing Page</h3>
-                <p>My first responsive portfolio site.</p>
-                <a href="https://browse2me1.github.io/my-portfolio/">View Project</a>
-            </div>
-             <div class="project">
-                <img src="p1.png" alt="Project 2">
-                <h3>Personal Landing Page</h3>
-                <p>My first responsive portfolio site.</p>
-                <a href="https://symbaseddis-iden.42web.io/" target="_blank">View Project</a>
-                </div>
-             <div class="project">Project 3</div>
-             <div class="project">Project 4</div>
-             <div class="project">Project 5</div>
-             <div class="project">Project 6</div>
-        </section>
-        <!--ssection 5-->
-          <section class="contact">
-            <h2 id="contact">Contact</h2>
-           <form action="https://formsubmit.co/anmutadmase@gmail.com" method="post">
-            <label for="name">Name:</label><br>
-            <input type="text" name="name" id="name" required><br><br>
 
-            <label for="email">Email:</label><br>
-            <input type="email" name="email" id="email" required><br><br>
+<!-- ── NAV ──────────────────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-logo"><img src="icon.png"></div>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#about">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-toggle" id="menuBtn" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#about" onclick="closeMenu()">Skills</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
 
-            <label for="message">Message:</label><br>
-            <textarea rows="5" name="messeage" id="message" required>
-                
-            </textarea><br><br>
+<!-- ── HERO ─────────────────────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-eyebrow">
+    <span></span>Open to opportunities
+  </div>
+  <h1 class="hero-name">Anmut<br/><em>Tsegaye</em></h1>
+  <p class="hero-role">
+    <strong>Health Informatics</strong> · HMIS Officer · Digital Health Builder
+  </p>
 
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://browse2me1.github.io/my-portfolio/thank-you.html">
+  <!-- ECG Heartbeat -->
+  <div class="ecg-wrap">
+    <svg width="100%" height="48" viewBox="0 0 480 48" preserveAspectRatio="none">
+      <polyline class="ecg-glow" points="0,24 60,24 80,24 90,4 100,44 110,8 120,24 160,24 180,24 200,24 220,24 240,4 250,44 260,8 270,24 320,24 340,24 360,24 380,24 400,4 410,44 420,8 430,24 480,24"/>
+      <polyline class="ecg-line" points="0,24 60,24 80,24 90,4 100,44 110,8 120,24 160,24 180,24 200,24 220,24 240,4 250,44 260,8 270,24 320,24 340,24 360,24 380,24 400,4 410,44 420,8 430,24 480,24"/>
+    </svg>
+  </div>
 
-            <button type="submit">Send Message</button>
-
-           </form>
-          </section>
-    </main>
-    <footer>
-    <div class="social-icons">
-        <a href="https://facebook.com/YOUR_FACEBOOK" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://t.me/techimplified" target="_blank"><i class="fab fa-telegram"></i></a>
-        <a href="https://github.com/browse2me1" target="_blank"><i class="fab fa-github"></i></a>
+  <p class="hero-desc">
+    BSc Health Informatics graduate from University of Gondar building digital health tools
+    and HMIS systems that turn data into decisions. Based in Bahirdar, Ethiopia.
+  </p>
+  <div class="hero-btns">
+    <a href="#projects" class="btn-main">View Projects ↓</a>
+    <a href="#contact" class="btn-out">Get in Touch →</a>
+  </div>
+  <div class="hero-stats">
+    <div>
+      <div class="stat-val">6+</div>
+      <div class="stat-lbl">Years HMIS Experience</div>
     </div>
-    <p>&copy; 2025 Anmut Tsegaye</p>
+    <div>
+      <div class="stat-val">4</div>
+      <div class="stat-lbl">Projects Built</div>
+    </div>
+    <div>
+      <div class="stat-val">3.69</div>
+      <div class="stat-lbl">CGPA — UoG 2025</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ──────────────────────────────────────────────────────────── -->
+<section id="projects">
+  <div class="sec-label">Work</div>
+  <h2 class="sec-title reveal">Projects Built</h2>
+  <p class="sec-sub reveal">Web applications bridging health informatics and technology — built after graduation.</p>
+
+  <div class="projects-grid">
+
+    <!-- ESV ICD-11 -->
+    <div class="proj-card reveal">
+      <span class="featured-badge">Featured</span>
+      <div class="proj-icon">🏥</div>
+      <span class="proj-tag">Health Informatics</span>
+      <h3 class="proj-title">ESV ICD-11 Smart Tool</h3>
+      <p class="proj-desc">A smart web tool for ICD-11 disease classification and symptom-based identification — designed to support clinicians and HMIS professionals with accurate health coding.</p>
+      <div class="proj-tech">
+        <span class="tech-pill">HTML</span>
+        <span class="tech-pill">CSS</span>
+        <span class="tech-pill">JavaScript</span>
+        <span class="tech-pill">ICD-11 API</span>
+      </div>
+      <div class="proj-links">
+        <a class="proj-link" href="https://anmutsegaye.github.io/ESV-ICD-11/" target="_blank">↗ Live Demo</a>
+        <a class="proj-link ghost" href="https://github.com/anmutsegaye" target="_blank">⌥ GitHub</a>
+      </div>
+    </div>
+
+    <!-- MemoryBook -->
+    <div class="proj-card reveal">
+      <div class="proj-icon">📖</div>
+      <span class="proj-tag">Social Platform</span>
+      <h3 class="proj-title">MemoryBook</h3>
+      <p class="proj-desc">A digital memory-sharing platform where colleagues and friends can post, preserve, and revisit shared memories together — a social space built around meaningful moments.</p>
+      <div class="proj-tech">
+        <span class="tech-pill">HTML</span>
+        <span class="tech-pill">CSS</span>
+        <span class="tech-pill">JavaScript</span>
+        <span class="tech-pill">Bootstrap</span>
+      </div>
+      <div class="proj-links">
+        <a class="proj-link ghost" href="https://github.com/anmutsegaye" target="_blank">⌥ GitHub</a>
+      </div>
+    </div>
+
+    <!-- TechSimplified -->
+    <div class="proj-card reveal">
+      <div class="proj-icon">🎓</div>
+      <span class="proj-tag">EdTech</span>
+      <h3 class="proj-title">TechSimplified</h3>
+      <p class="proj-desc">An educational platform making technology concepts accessible and easy to understand — tutorials, guides, and resources for learners at any level.</p>
+      <div class="proj-tech">
+        <span class="tech-pill">HTML</span>
+        <span class="tech-pill">CSS</span>
+        <span class="tech-pill">JavaScript</span>
+      </div>
+      <div class="proj-links">
+        <a class="proj-link ghost" href="https://github.com/anmutsegaye" target="_blank">⌥ GitHub</a>
+      </div>
+    </div>
+
+    <!-- CV Builder -->
+    <div class="proj-card reveal">
+      <div class="proj-icon">📄</div>
+      <span class="proj-tag">Productivity · AI</span>
+      <h3 class="proj-title">CVcraft — AI CV Generator</h3>
+      <p class="proj-desc">A universal AI-powered CV generator supporting 15+ professions — healthcare, engineering, education, finance and more. AI writes all sections from a brief background description.</p>
+      <div class="proj-tech">
+        <span class="tech-pill">React</span>
+        <span class="tech-pill">Vite</span>
+        <span class="tech-pill">Claude API</span>
+        <span class="tech-pill">JavaScript</span>
+      </div>
+      <div class="proj-links">
+        <a class="proj-link ghost" href="https://github.com/anmutsegaye" target="_blank">⌥ GitHub</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── ABOUT / SKILLS ────────────────────────────────────────────────────── -->
+<section id="about" style="background:var(--navy)">
+  <div>
+    <div class="sec-label">About</div>
+    <h2 class="sec-title reveal">Health + Technology</h2>
+    <div class="about-text reveal">
+      <p>I'm a <strong>Health Informatics professional</strong> with practical experience managing Health Management Information Systems (HMIS), conducting data quality assurance, and developing web-based digital health applications.</p>
+      <p>Currently serving as <strong>HMIS Officer at Mehal Amba Primary Hospital</strong>, I coordinate DHIS2 reporting, lead data verification and validation, and support evidence-based decision-making through quality health information.</p>
+      <p>Alongside my HMIS work, I build <strong>web applications</strong> that bridge the gap between health systems and people — from clinical coding tools to educational platforms and productivity apps.</p>
+      <p>Based in <strong>Bahirdar, Ethiopia</strong> · Open to remote collaboration and digital health opportunities.</p>
+    </div>
+  </div>
+
+  <div class="skills-wrap reveal">
+    <div>
+      <div class="skill-group-label">Health Information Systems</div>
+      <div class="skill-tags">
+        <span class="skill-tag">DHIS2</span>
+        <span class="skill-tag">HMIS Reporting</span>
+        <span class="skill-tag">Data Quality</span>
+        <span class="skill-tag">Health Data Validation</span>
+        <span class="skill-tag">EMR Systems</span>
+        <span class="skill-tag">Digital Health</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-group-label">Programming & Web</div>
+      <div class="skill-tags">
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">PHP</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">Bootstrap</span>
+        <span class="skill-tag">Firebase</span>
+        <span class="skill-tag">Git & GitHub</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-group-label">Design & Software</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">Adobe Photoshop</span>
+        <span class="skill-tag">Canva</span>
+        <span class="skill-tag">Microsoft Office</span>
+        <span class="skill-tag">Excel</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-group-label">Languages</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Amharic — Native</span>
+        <span class="skill-tag">English — Professional</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ────────────────────────────────────────────────────────── -->
+<section id="experience">
+  <div class="sec-label">Experience</div>
+  <h2 class="sec-title reveal">Professional Background</h2>
+
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-dot-col">
+        <div class="tl-dot"></div>
+        <div class="tl-line"></div>
+      </div>
+      <div>
+        <div class="tl-date">Oct 2018 E.C – Present</div>
+        <div class="tl-role">HMIS Officer / HMIS Focal Person</div>
+        <div class="tl-org">Mehal Amba Primary Hospital · Bahirdar, Ethiopia</div>
+        <div class="tl-desc">
+          <ul>
+            <li>Coordinate routine HMIS reporting and ensure timely submission to regional health bureaus</li>
+            <li>Conduct data quality verification and validation across all facility departments</li>
+            <li>Prepare annual operational plans and routine performance reports</li>
+            <li>Serve as Secretary of the Performance Review Team (PRT)</li>
+            <li>Support DHIS2 data entry, analysis, and evidence-based data utilization</li>
+            <li>Promote evidence-based decision-making through quality health information systems</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-dot-col">
+        <div class="tl-dot"></div>
+        <div class="tl-line"></div>
+      </div>
+      <div>
+        <div class="tl-date">2021 – 2025</div>
+        <div class="tl-role">BSc Health Informatics Student</div>
+        <div class="tl-org">University of Gondar · Gondar, Ethiopia</div>
+        <div class="tl-desc">
+          <ul>
+            <li>Graduated with CGPA 3.69 — top academic standing</li>
+            <li>Final Year Project: Symptom-Based Disease Identification App — a web tool for clinical decision support</li>
+            <li>Studied health information systems, database management, programming, and digital health</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-dot-col">
+        <div class="tl-dot"></div>
+      </div>
+      <div>
+        <div class="tl-date">Certifications & Training</div>
+        <div class="tl-role">Professional Development</div>
+        <div class="tl-org">Multiple organizations</div>
+        <div class="training-list" style="margin-top:.75rem">
+          <div class="training-item">
+            <div class="tr-icon">📊</div>
+            <div>
+              <div class="tr-name">DHIS2 Academy Training</div>
+              <div class="tr-org">Center for Digital Health and Implementation Science (CDHI)</div>
+            </div>
+          </div>
+          <div class="training-item">
+            <div class="tr-icon">🔬</div>
+            <div>
+              <div class="tr-name">Field-Ready: Research & Soft Skills</div>
+              <div class="tr-org">MERQ Consultancy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ───────────────────────────────────────────────────────────── -->
+<section id="contact">
+  <div class="sec-label" style="justify-content:center">Contact</div>
+  <h2 class="contact-title reveal">Let's <em>build</em> something</h2>
+  <p class="contact-sub reveal">Open to digital health projects, HMIS consulting, and web development collaboration. Let's connect.</p>
+  <div class="contact-links reveal">
+    <a class="contact-btn primary" href="mailto:anmutadmase@gmail.com">✉ anmutadmase@gmail.com</a>
+    <a class="contact-btn" href="https://www.linkedin.com/in/anmut-tsegaye" target="_blank">🔗 LinkedIn</a>
+    <a class="contact-btn" href="https://github.com/anmutsegaye" target="_blank">🐙 GitHub</a>
+    <a class="contact-btn" href="tel:+251943915972">📞 +251 943 915 972</a>
+  </div>
+</section>
+
+<footer>
+  Built by <span>Anmut Tsegaye</span> · Health Informatics Professional · Bahirdar, Ethiopia
 </footer>
+
+<script src="script.js"></script>
 </body>
 </html>
